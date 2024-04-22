@@ -1,0 +1,22 @@
+package recursion;
+
+public class Faculty {
+	
+	public static long calculateFaculty(int n) {
+		if(n == 0) {
+			return 1;
+		}else {
+			return n * calculateFaculty(n-1);
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println(calculateFaculty(70));
+		
+		
+
+	}
+
+}
