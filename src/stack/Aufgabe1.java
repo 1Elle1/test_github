@@ -1,28 +1,28 @@
 package stack;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class Aufgabe1 {
 	
 	
 	public static String reverseString(String input) {
-        Stack<Character> stack = new Stack<Character>();
-        StringBuilder reversedString = new StringBuilder();
-        
-        for (char ch : input.toCharArray()) {
-            stack.push(ch);
+        LinkedList<Character> stack = new LinkedList<>();
+        for(char c : input.toCharArray()) {
+        	stack.push(c);
         }
-        
-        while (!stack.isEmpty()) {
-            reversedString.append(stack.pop());
+        StringBuilder reversed = new StringBuilder();
+        while(!stack.isEmpty()) {
+        	reversed.append(stack.pop());
         }
-        
-        return reversedString.toString();
+        return reversed.toString();
     }
 
     public static void main(String[] args) {
-        String input = "Beispiel"; 
-        System.out.println("Original: " + input + " | Umgekehrt: " + reverseString(input));
+    	
+    	String input = "Hello World!";
+    	String output = reverseString(input);
+    	System.out.println(output);
+        
     }
 }
 
