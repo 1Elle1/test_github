@@ -15,7 +15,7 @@ public class StringArrayParser {
 		for (int i = 0; i < numbers.length; i++) {
 			intNumbers[i] = parseStringToInt(numbers[i], 0);
 		}
-		return 0;
+		return intNumbers;
 	}
 
 	public static void main(String[] args) {
