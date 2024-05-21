@@ -1,5 +1,7 @@
 package Exceptions;
 
+import java.util.Arrays;
+
 public class StringArrayParser {
 
 	private static int parseStringToInt(String string, int defaultValue) {
@@ -19,7 +21,10 @@ public class StringArrayParser {
 	}
 
 	public static void main(String[] args) {
- 
+		int[] test1 = parseInts("2", "23", "323");
+		System.out.println(Arrays.toString(test1));
+		int[] test2 = parseInts("2", "Hallo");
+		System.out.println(Arrays.toString(test2));
 	}
 
 }
