@@ -1,23 +1,28 @@
 package Exceptions;
 
 public class Aufgabe6_4 {
-	
-	
+
 	public static int CheckFileExtension(String fileName) {
-		int pupil = 0;
 
 		if(fileName.endsWith(".java")) {
-			pupil ++;
-		}else if(!fileName.endsWith(".java")) {
-			
+			return 1;
 		}else if(fileName.isEmpty()) {
-			pupil --;
+			throw new IllegalInputtype();
 		}
+		return 0;
+		
+			
 	}
 
 	public static void main(String[] args) {
-		
 
+		String datei = "";
+		try {
+			System.out.println(CheckFileExtension(datei));
+		}catch(IllegalInputtype e){
+			System.out.println("Falsche datei endung. \n -1");
+		}
+		
 	}
 
 }
